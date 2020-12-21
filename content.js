@@ -7,7 +7,7 @@ onWebpageLoad = () => {
     for (let char of domain) {
         console.log(char);
         if (!validCharacters.includes(char)) {
-            alert("NoPhish: This webpage may not be legitimate. The character "+ char + " is suspicious.");
+            alert("NoPhish: This webpage may not be legitimate. The character " + char + " is suspicious.");
         }
     }
 }
