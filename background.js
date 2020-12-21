@@ -11,6 +11,8 @@ chrome.runtime.onInstalled.addListener(function() {
               actions: [new chrome.declarativeContent.ShowPageAction()]
         }]);
     });
-
-
-  });
+});
+  
+onWebpageLoad = () => {
+    alert("PHSIH!");
+}
