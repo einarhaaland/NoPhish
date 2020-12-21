@@ -12,7 +12,4 @@ chrome.runtime.onInstalled.addListener(function() {
         }]);
     });
 });
-  
-onWebpageLoad = () => {
-    alert("PHSIH!");
-}
+ 
