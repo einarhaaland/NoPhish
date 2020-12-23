@@ -3,6 +3,7 @@
     "version": "1.0",
     "description": "Avoid getting phished!",
     "permissions": ["activeTab", "storage"],
+    "web_accessible_resources": ["modal.html", "images/*.png", "fonts/*.ttf"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
