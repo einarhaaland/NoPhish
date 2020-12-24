@@ -1,4 +1,4 @@
-const validCharacters = "abcdefghijklmnopqrstuvwxyz01234567890.-:/\\";
+const validCharacters = "abcdefhijklmnopqrstuvwxyz01234567890.-:/\\";
 
 handleModalClick = function() {
     document.getElementById("modal-wrapper").remove();
@@ -39,7 +39,7 @@ renderModal = (contentString) => {
     modalDialogHeadDiv.setAttribute("style","text-align: center; margin: 2%;");
 
     imageElement = document.createElement("img"); 
-    imageElement.src = chrome.extension.getURL("images/get_started32.png");
+    imageElement.src = chrome.extension.getURL("images/Icon48.png");
     imageElement.setAttribute("style","margin: 2%; display: inline; vertical-align: middle;");
 
     titleElement = document.createElement("h1");
