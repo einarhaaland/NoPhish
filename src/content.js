@@ -1,4 +1,4 @@
-const validCharacters = "abcdefhijklmnopqrstuvwxyz01234567890.-:/\\";
+const validCharacters = "abcdefghijklmnopqrstuvwxyz01234567890.-:/\\";
 
 handleModalClick = function() {
     document.getElementById("modal-wrapper").remove();
@@ -8,11 +8,10 @@ handleModalClick = function() {
 onWebpageLoad = () => {
     let domain = window.location.hostname;
     chrome.storage.sync.set({domainName: domain}, function() {
-        console.log("Domain name has been saved.");
+        console.log("Domain name updated.");
     });
     for (let char of domain) {
         if (!validCharacters.includes(char)) {
-            console.log("Rendering modal");
             renderModal("This webpage may not be legitimate. The character \"" + char + "\" is phishy...");
             return;
         }
@@ -39,7 +38,7 @@ renderModal = (contentString) => {
     modalDialogHeadDiv.setAttribute("style","text-align: center; margin: 2%;");
 
     imageElement = document.createElement("img"); 
-    imageElement.src = chrome.extension.getURL("images/Icon48.png");
+    imageElement.src = chrome.extension.getURL("images/Icon32.png");
     imageElement.setAttribute("style","margin: 2%; display: inline; vertical-align: middle;");
 
     titleElement = document.createElement("h1");
@@ -79,6 +78,5 @@ renderModal = (contentString) => {
     document.body.appendChild(wrapperDiv);
     document.body.appendChild(modalDialogParentDiv);
 }
-
 
 onWebpageLoad();
