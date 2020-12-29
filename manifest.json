@@ -1,7 +1,7 @@
 {
     "name": "NoPhish",
     "version": "1.0",
-    "description": "Avoid getting phished!",
+    "description": "Helps prevent phishing by offering protection against an IDN homograph attack.",
     "permissions": ["storage"],
     "web_accessible_resources": ["images/*.png", "fonts/*.ttf"],
     "background": {
