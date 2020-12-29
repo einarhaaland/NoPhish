@@ -2,7 +2,7 @@
     "name": "NoPhish",
     "version": "1.0",
     "description": "Avoid getting phished!",
-    "permissions": ["activeTab", "storage"],
+    "permissions": ["storage"],
     "web_accessible_resources": ["images/*.png", "fonts/*.ttf"],
     "background": {
         "scripts": ["src/background.js"],

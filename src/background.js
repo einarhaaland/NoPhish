@@ -1,6 +1,4 @@
 chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-      console.log("The color is green.");
-    });
+    console.log("Thank you for installing NoPhish! Please check out the Product Page for how to get the most out of this extension.")
 });
  
