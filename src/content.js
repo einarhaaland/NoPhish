@@ -1,10 +1,12 @@
-const validCharacters = "abcdefghijklmnopqrstuvwxyz01234567890.-:/\\";
+const validCharacters = "abcdefghijklmnopqrstuvwxyz1234567890.-:/\\";
 
-handleModalClick = function() {
+//Removes alert modal
+handleModalClick = () => {
     document.getElementById("modal-wrapper").remove();
     document.getElementById("dialog-wrapper").remove();
 }
 
+//Stores hostname and analyzes is for invalid characters
 onWebpageLoad = () => {
     let domain = window.location.hostname;
     chrome.storage.sync.set({domainName: domain}, function() {
@@ -18,6 +20,7 @@ onWebpageLoad = () => {
     }
 }
 
+//Renders an alert modal when encountering invalid characters in domain.
 renderModal = (contentString) => {
     wrapperDiv = document.createElement("div");
     wrapperDiv.setAttribute("style","position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255); opacity: 0.5; z-index: 2000; height: 100%; width: 100%;");
